@@ -15,7 +15,12 @@
     {
       "src": "/user/:id",
       "dest": "/app.js",
-      "methods": ["POST"]
+      "methods": ["GET"]
+    },
+    {
+      "src": "/follow",
+      "dest": "/app.js",
+      "methods": ["PUT"]
     }
   ]
 }
