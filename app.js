@@ -5,7 +5,7 @@ const {MONGOURL} = require('./config/keys')
 mongooes.connect(MONGOURL,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(console.log("connect to db"))
 const app = express();
-const PORT = "http://localhost:5000";
+const PORT = process.env.PORT || 5000;
 
 
 mongooes.connection.on('connected', ()=>{
