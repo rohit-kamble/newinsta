@@ -6,6 +6,11 @@
       "src": "/allpost",
       "dest": "/app.js",
       "methods": ["GET"]
+    },
+    {
+      "src": "/users",
+      "dest": "/app.js",
+      "methods": ["GET"]
     }
   ]
 }
