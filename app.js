@@ -5,7 +5,7 @@ const {MONGOURL} = require('./config/keys')
 mongooes.connect(MONGOURL,{useNewUrlParser: true, useUnifiedTopology: true})
 .then(console.log("connect to db"))
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = "http://localhost:5000";
 
 
 mongooes.connection.on('connected', ()=>{
@@ -36,14 +36,6 @@ app.use(express.json())
 app.use(require('./routes/auth'))
 app.use(require('./routes/post'))
 app.use(require('./routes/user'))
-
-if(process.env.NODE_ENV === "production") {
-  app.use(express.static('clint/build'))
-  const path = require('path')
-  app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  })
-}
 
 app.listen(PORT,()=>{
   console.log("server is running on", PORT);
