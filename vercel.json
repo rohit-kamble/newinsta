@@ -11,6 +11,11 @@
       "src": "/users",
       "dest": "/app.js",
       "methods": ["GET"]
+    },
+    {
+      "src": "/user/:id",
+      "dest": "/app.js",
+      "methods": ["POST"]
     }
   ]
 }
