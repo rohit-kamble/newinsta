@@ -1,8 +1,7 @@
 const express = require('express');
 const mongooes = require('mongoose');
-const {MONGOURL} = require('./config/keys')
 
-mongooes.connect(MONGOURL,{useNewUrlParser: true, useUnifiedTopology: true})
+mongooes.connect("mongodb+srv://rohit:123@cluster0.wwpnq.mongodb.net/test",{useNewUrlParser: true, useUnifiedTopology: true})
 .then(console.log("connect to db"))
 const app = express();
 const PORT = process.env.PORT || 5000;
